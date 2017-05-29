@@ -1,0 +1,9 @@
+[pi-niwot]
+192.168.1.29 ansible_ssh_user=tmackall
+
+[pi-sd]
+192.168.1.27 ansible_ssh_user=tmackall
+
+[home:children]
+pi-sd
+pi-niwot

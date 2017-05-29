@@ -1,0 +1,14 @@
+---
+- hosts: pi-niwot
+  name: PI apt dist-upgrade
+  become: yes
+
+  roles:
+  # apt update packages
+  - update
+  # nodejs
+  - geerlingguy.nodejs
+  # java
+  - geerlingguy.java
+  # docker
+  - Benaud12.docker-pi

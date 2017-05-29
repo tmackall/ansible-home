@@ -1,0 +1,11 @@
+---
+- hosts: pi-niwot
+  become: yes
+
+  tasks:
+  - name: Ensure that docker is installed
+    apt: name=docker state=present
+    when: ansible_os_family == "Debian"
+
+  - name: Start docker services
+    service: name=docker enabled=yes state=started

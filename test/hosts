@@ -1,0 +1,12 @@
+pi-niwot ansible_ssh_host=pi-niwot.malamack.com ansible_ssh_user=tmackall
+pi-sd ansible_ssh_host=pi-sd ansible_ssh_user=tmackall 
+
+[niwot]
+pi-niwot
+
+[san-diego]
+pi-sd
+
+[house:children]
+niwot
+san-diego
